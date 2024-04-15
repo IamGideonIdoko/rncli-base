@@ -1,0 +1,7 @@
+.eslintcache
+.github/
+/coverage
+node_modules/
+dist/
+coverage/
+metro.config.js

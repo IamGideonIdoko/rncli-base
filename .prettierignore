@@ -1,0 +1,6 @@
+.eslintcache
+.github/
+/coverage
+node_modules/
+dist/
+coverage/
