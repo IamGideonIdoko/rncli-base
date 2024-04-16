@@ -1,12 +1,12 @@
 /* eslint-disable no-comments/disallowComments */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { pathsToModuleNameMapper } = require('ts-jest');
-require('ts-jest/presets');
 
-/** @type {import('ts-jest').JestConfigWithTsJest} */
-module.exports = {
+import { pathsToModuleNameMapper, type JestConfigWithTsJest } from 'ts-jest';
+import { defaults as tsjPreset } from 'ts-jest/presets';
+
+const jestConfig: JestConfigWithTsJest = {
+  ...tsjPreset,
   preset: 'react-native',
-  setupFiles: ['./node_modules/react-native-gesture-handler/jestSetup.js', './src/jest.setup.js'],
+  setupFiles: ['./node_modules/react-native-gesture-handler/jestSetup.js', './src/jest.setup.ts'],
   transform: {
     '^.+\\.jsx$': 'babel-jest',
     '^.+\\.tsx?$': [
@@ -17,7 +17,6 @@ module.exports = {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  //   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   transformIgnorePatterns: [
     'node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation|@notifee/react-native)',
   ],
@@ -26,6 +25,8 @@ module.exports = {
     ...pathsToModuleNameMapper({
       '@/*': ['*'],
     }),
-    '\\.svg': '<rootDir>/src/__mocks__/svg.mock.js',
+    '\\.svg': '<rootDir>/src/__mocks__/svg.mock.ts',
   },
 };
+
+export default jestConfig;
