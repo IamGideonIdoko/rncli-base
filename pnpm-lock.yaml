@@ -31,9 +31,6 @@ devDependencies:
   '@babel/core':
     specifier: ^7.20.0
     version: 7.24.4
-  '@babel/plugin-transform-flow-strip-types':
-    specifier: ^7.24.1
-    version: 7.24.1(@babel/core@7.24.4)
   '@babel/preset-env':
     specifier: ^7.20.0
     version: 7.24.4(@babel/core@7.24.4)
