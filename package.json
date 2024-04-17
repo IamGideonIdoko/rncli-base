@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "private": false,
   "scripts": {
+    "preinstall": "npx only-allow npm",
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint:base": "eslint --ext .cjs,.mjs,.js,jsx,.ts,.tsx --max-warnings=0 --cache --report-unused-disable-directives --report-unused-disable-directives --resolve-plugins-relative-to=.",
-    "lint:check": "pnpm lint:base ./",
-    "lint:next": "next lint",
+    "lint:check": "npm run lint:base ./",
     "lint:staged": "lint-staged",
-    "lint": "pnpm lint:base --fix ./",
+    "lint": "npm run lint:base --fix ./",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest -watch",
@@ -69,9 +69,9 @@
     "typescript": "5.4.4"
   },
   "engines": {
-    "npm": "please-use-pnpm",
-    "yarn": "please-use-pnpm",
+    "npm": ">=10",
+    "yarn": "please-use-npm",
     "node": ">=20",
-    "pnpm": ">=8.0.0"
+    "pnpm": "please-use-npm"
   }
 }

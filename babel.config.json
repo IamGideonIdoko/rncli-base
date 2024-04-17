@@ -17,4 +17,4 @@
       "plugins": ["transform-remove-console"],
     },
   },
-};
+}

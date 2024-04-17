@@ -14,7 +14,7 @@ const removeIgnoredFiles = async (files) => {
 const lintStagedConfig = {
   './**/*.(cjs|mjs|js|jsx|ts|tsx)': async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
-    return [`pnpm lint:base --fix ${filesToLint}`];
+    return [`npm run lint:base --fix ${filesToLint}`];
   },
 };
 

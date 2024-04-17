@@ -13,12 +13,13 @@ const jestConfig: JestConfigWithTsJest = {
       'ts-jest',
       {
         tsconfig: 'tsconfig.spec.json',
+        babelConfig: true,
       },
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   transformIgnorePatterns: [
-    'node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation|@notifee/react-native)',
+    'node_modules/(?!(jest-)?@?react-native|@react-native|@react-native-community|@react-navigation|@notifee/react-native)',
   ],
   modulePaths: ['./src'],
   moduleNameMapper: {
