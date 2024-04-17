@@ -76,3 +76,6 @@ index.android.bundle
 
 # Misc
 /staging
+
+# eslint
+.eslintcache
